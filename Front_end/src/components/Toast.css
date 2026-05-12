@@ -1,0 +1,60 @@
+/* ==============================
+   TOAST — soft HCI notification
+============================== */
+.toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-80px);
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 22px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast--show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* TYPE VARIANTS */
+.toast--success {
+  background: rgba(16, 185, 129, 0.92);
+  color: #fff;
+}
+
+.toast--warning {
+  background: rgba(245, 158, 11, 0.92);
+  color: #fff;
+}
+
+.toast--error {
+  background: rgba(239, 68, 68, 0.92);
+  color: #fff;
+}
+
+.toast--info {
+  background: rgba(30, 41, 59, 0.92);
+  color: #e2e8f0;
+}
+
+.toast-msg {
+  line-height: 1.4;
+}

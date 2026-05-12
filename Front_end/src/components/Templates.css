@@ -1,0 +1,25 @@
+.cv {
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* LAYOUT VARIANTS */
+.cv-split { display: flex; }
+.cv-center { text-align: center; }
+.cv-card { background: white; }
+.cv-sidebar { display: flex; }
+.cv-dashboard { background: #0f172a; color: white; }
+.cv-compact { font-size: 12px; }
+.cv-bold { font-weight: bold; }
+
+/* THEME VARIANTS */
+.theme-dark { background: #0f172a; color: white; }
+.theme-light { background: white; color: black; }
+.theme-gradient { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; }
+
+.avatar {
+  width: 80px;
+  border-radius: 50%;
+}

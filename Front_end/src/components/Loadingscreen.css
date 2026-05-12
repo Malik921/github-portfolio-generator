@@ -1,0 +1,273 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* ==============================
+   BACKGROUND ORBS
+============================== */
+.load-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: orbFloat 6s ease-in-out infinite;
+}
+
+.orb1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(99, 102, 241, 0.3);
+  top: -100px;
+  left: -100px;
+}
+
+.orb2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(6, 182, 212, 0.2);
+  bottom: -80px;
+  right: -80px;
+  animation-delay: 2s;
+}
+
+.orb3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(139, 92, 246, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.1) translate(15px, -15px); }
+}
+
+/* ==============================
+   CONTENT
+============================== */
+.loading-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 460px;
+  padding: 40px 24px;
+}
+
+/* ==============================
+   SPINNER
+============================== */
+.spinner-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.08);
+  border-top: 3px solid #6366f1;
+  border-right: 3px solid #06b6d4;
+  animation: spin 1s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.spinner-inner {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-logo-load {
+  font-size: 28px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==============================
+   TEXT
+============================== */
+.loading-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #f1f5f9;
+  text-align: center;
+  margin: 0;
+}
+
+.loading-title span {
+  color: #6366f1;
+}
+
+.loading-sub {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.loading-sub strong {
+  color: #94a3b8;
+}
+
+/* ==============================
+   STEPS
+============================== */
+.loading-steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.load-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.load-step.pending {
+  opacity: 0.3;
+}
+
+.load-step.active {
+  background: rgba(99, 102, 241, 0.12);
+  opacity: 1;
+}
+
+.load-step.done {
+  opacity: 0.65;
+}
+
+.step-icon-wrap {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-check {
+  width: 20px;
+  height: 20px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.step-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: inline-block;
+}
+
+.step-text {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.load-step.active .step-text {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* ==============================
+   PROGRESS BAR
+============================== */
+.load-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.load-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+.load-percent {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+.load-orb { position:absolute;border-radius:50%;filter:blur(100px);animation:orbFloat 6s ease-in-out infinite; }
+.orb1 { width:400px;height:400px;background:rgba(99,102,241,0.3);top:-100px;left:-100px; }
+.orb2 { width:350px;height:350px;background:rgba(6,182,212,0.2);bottom:-80px;right:-80px;animation-delay:2s; }
+.orb3 { width:250px;height:250px;background:rgba(139,92,246,0.2);top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:1s; }
+@keyframes orbFloat { 0%,100%{transform:scale(1)}50%{transform:scale(1.12) translate(12px,-12px)} }
+.loading-content { position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:440px;padding:40px 24px; }
+.spinner-ring { width:86px;height:86px;border-radius:50%;border:3px solid rgba(255,255,255,0.06);border-top-color:#6366f1;border-right-color:#06b6d4;animation:spin 1s linear infinite;display:flex;align-items:center;justify-content:center;margin-bottom:6px; }
+.spinner-inner { width:64px;height:64px;border-radius:50%;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;font-size:26px; }
+@keyframes spin { to{transform:rotate(360deg)} }
+.loading-title { font-size:24px;font-weight:700;color:#f1f5f9;text-align:center;margin:0;font-family:'Poppins',sans-serif; }
+.loading-title span { color:#6366f1; }
+.loading-sub { font-size:14px;color:#64748b;margin:0;font-family:'Poppins',sans-serif; }
+.loading-sub strong { color:#94a3b8; }
+.loading-steps { width:100%;display:flex;flex-direction:column;gap:8px;margin:6px 0; }
+.load-step { display:flex;align-items:center;gap:12px;padding:9px 14px;border-radius:10px;transition:all 0.3s ease; }
+.load-step.pending { opacity:0.25; }
+.load-step.active  { background:rgba(99,102,241,0.12);opacity:1; }
+.load-step.done    { opacity:0.55; }
+.step-icon-wrap { width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.step-check { width:20px;height:20px;background:#10b981;border-radius:50%;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center; }
+.step-spinner { width:17px;height:17px;border:2px solid rgba(99,102,241,0.25);border-top-color:#6366f1;border-radius:50%;display:inline-block;animation:spin 0.75s linear infinite; }
+.step-dot { width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.18);display:inline-block; }
+.step-text { font-size:13.5px;color:#94a3b8;font-family:'Poppins',sans-serif; }
+.load-step.active .step-text { color:#e2e8f0;font-weight:500; }
+.load-progress-bar { width:100%;height:4px;background:rgba(255,255,255,0.07);border-radius:20px;overflow:hidden;margin-top:6px; }
+.load-progress-fill { height:100%;background:linear-gradient(90deg,#6366f1,#06b6d4);border-radius:20px;transition:width 0.5s ease; }
+.load-percent { font-size:12px;color:#475569;margin:0;font-family:'Poppins',sans-serif; }

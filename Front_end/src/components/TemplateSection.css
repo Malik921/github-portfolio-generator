@@ -1,0 +1,234 @@
+.template-section {
+  padding: 90px 20px 60px;
+  background: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.template-section-header {
+  margin-bottom: 50px;
+}
+
+.template-section-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.template-section-sub {
+  font-size: 16px;
+  color: #64748b;
+}
+
+/* ==============================
+   CAROUSEL
+============================== */
+.template-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.template-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px 30px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+  flex: 1;
+}
+
+.template-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.template-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.template-track::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+/* ==============================
+   TEMPLATE CARD
+============================== */
+.template-card {
+  flex: 0 0 210px;
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.template-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+
+.template-card.selected {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.2), 0 16px 40px rgba(0,0,0,0.14);
+}
+
+/* ==============================
+   MINI CV PREVIEW
+============================== */
+.cv-mini-preview {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: border-color 0.2s ease;
+}
+
+.cv-mini-sidebar {
+  width: 36%;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.mini-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.mini-sidebar-line {
+  height: 3px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+
+.cv-mini-main {
+  flex: 1;
+  padding: 10px 10px;
+  overflow: hidden;
+}
+
+.selected-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ==============================
+   CARD FOOTER
+============================== */
+.template-card-footer {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.template-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: left;
+}
+
+.use-template-btn {
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  letter-spacing: 0.3px;
+}
+
+.use-template-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   ARROWS
+============================== */
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #e2e8f0;
+  background: white;
+  font-size: 24px;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  transform: scale(1.06);
+}
+
+/* ==============================
+   DOTS
+============================== */
+.template-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.template-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  display: inline-block;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .template-section-title {
+    font-size: 26px;
+  }
+  .carousel-arrow {
+    display: none;
+  }
+}

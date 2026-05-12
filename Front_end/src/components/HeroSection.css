@@ -1,0 +1,1234 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* ========================================= */
+/* MAIN SECTION */
+/* ========================================= */
+
+.hero{
+    min-height:100vh;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #67d1ff 0%,
+        #a8c7ff 40%,
+        #d9b6ff 75%,
+        #f29fff 100%
+    );
+
+    padding:22px 32px;
+}
+
+/* ========================================= */
+/* BLUR EFFECTS */
+/* ========================================= */
+
+.blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.blur1{
+    width:280px;
+    height:280px;
+    background:#00c3ff;
+
+    top:-120px;
+    left:-120px;
+}
+
+.blur2{
+    width:280px;
+    height:280px;
+    background:#d46cff;
+
+    right:-120px;
+    bottom:-120px;
+}
+
+/* ========================================= */
+/* TITLE */
+/* ========================================= */
+
+.main-title{
+    text-align:center;
+    font-size:36px;
+    font-weight:700;
+    color:#081126;
+    margin-bottom:24px;
+    position:relative;
+    z-index:2;
+}
+
+/* ========================================= */
+/* NAVBAR */
+/* ========================================= */
+
+.navbar{
+    width:100%;
+    max-width:1180px;
+    margin:auto;
+    height:72px;
+    background:white;
+    border-radius:50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 24px;
+    position:relative;
+    z-index:5;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ========================================= */
+/* LOGO */
+/* ========================================= */
+
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#061b57;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    font-weight:700;
+
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.logo:hover{
+    transform:scale(1.08);
+}
+
+/* ========================================= */
+/* NAV LINKS */
+/* ========================================= */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+/* ========================================= */
+/* NAV BUTTONS */
+/* ========================================= */
+
+.nav-btn{
+    border:none;
+    background:transparent;
+
+    font-size:15px;
+    font-weight:500;
+    color:#101827;
+
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.nav-btn:hover{
+    color:#4b58ff;
+    transform:translateY(-2px);
+}
+
+/* ========================================= */
+/* HERO CONTENT */
+/* ========================================= */
+
+.hero-content{
+    margin-top:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    position:relative;
+    z-index:2;
+}
+
+/* LEFT */
+.left-content{
+    width:48%;
+}
+
+.left-content h1{
+    font-size:42px;
+    line-height:52px;
+    font-weight:700;
+    color:#081126;
+}
+
+.left-content span{
+    color:#4d63ff;
+}
+
+.left-content p{
+    margin-top:18px;
+    width:95%;
+    font-size:17px;
+    line-height:30px;
+    color:#384256;
+}
+
+/* BUTTONS */
+.hero-buttons{
+    margin-top:28px;
+    display:flex;
+    gap:16px;
+}
+
+.get-started{
+    border:none;
+    padding:16px 28px;
+    border-radius:18px;
+    background:#221f7a;
+    color:white;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.get-started:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 22px rgba(34,31,122,0.28);
+}
+
+.view-template{
+    border:none;
+    padding:16px 28px;
+    border-radius:18px;
+    background:white;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.view-template:hover{
+    transform:translateY(-4px);
+}
+
+/* RIGHT */
+.right-content{
+    width:48%;
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+/* FLOATING */
+.floating{
+    position:absolute;
+    border-radius:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:700;
+    box-shadow:0 8px 22px rgba(0,0,0,0.12);
+    animation:float 4s ease-in-out infinite;
+}
+
+.code-icon{
+    width:72px;
+    height:72px;
+    background:linear-gradient(135deg,#7f5cff,#8e65ff);
+    top:30px;
+    left:0;
+    font-size:28px;
+}
+
+.js-icon{
+    width:78px;
+    height:78px;
+    background:linear-gradient(135deg,#3d7eff,#5f8dff);
+    right:0;
+    bottom:40px;
+    font-size:30px;
+}
+
+.github-icon{
+    width:84px;
+    height:84px;
+    background:white;
+    color:black;
+    top:0;
+    right:20px;
+    font-size:15px;
+}
+
+/* LAPTOP */
+.laptop{
+    width:100%;
+    max-width:500px;
+    height:310px;
+    background:#1d1a4b;
+    border-radius:24px;
+    padding:14px;
+    transform:perspective(1200px) rotateY(-7deg);
+    box-shadow:0 18px 45px rgba(0,0,0,0.18);
+}
+
+.screen{
+    width:100%;
+    height:100%;
+    background:white;
+    border-radius:16px;
+    display:flex;
+    overflow:hidden;
+}
+
+/* SIDEBAR */
+.screen-sidebar{
+    width:30%;
+    background:#0f1235;
+    padding:22px 14px;
+}
+
+.line{
+    height:8px;
+    background:#4f7cff;
+    border-radius:20px;
+    margin-bottom:14px;
+}
+
+.short{
+    width:70%;
+}
+
+/* CONTENT */
+.screen-content{
+    width:70%;
+    padding:18px;
+}
+
+.top-links{
+    display:flex;
+    justify-content:flex-end;
+    gap:16px;
+    font-size:11px;
+    margin-bottom:18px;
+}
+
+.profile{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.profile-text h2{ font-size:14px; }
+.profile-text h1{ font-size:22px; color:#4b58ff; }
+.profile-text p{ font-size:12px; }
+
+.avatar{
+    width:95px;
+    height:115px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#654dff,#8e5cff);
+}
+
+/* SOCIALS */
+.socials{
+    display:flex;
+    gap:8px;
+    margin-top:12px;
+}
+
+.socials div{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#4b58ff;
+}
+
+/* PROJECTS */
+.projects{
+    display:flex;
+    gap:12px;
+    margin-top:24px;
+}
+
+.projects div{
+    width:75px;
+    height:55px;
+    border-radius:14px;
+    background:#ececff;
+}
+
+/* ANIMATIONS */
+@keyframes float{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-12px); }
+    100%{ transform:translateY(0px); }
+}
+
+/* TABLET */
+@media (max-width:992px){
+    .hero-content{ flex-direction:column; text-align:center; }
+    .left-content, .right-content{ width:100%; }
+}
+
+/* MOBILE */
+@media (max-width:768px){
+    .navbar{ flex-direction:column; height:auto; gap:18px; }
+}
+
+/* ========================================= */
+/* INPUT */
+/* ========================================= */
+
+.github-input-box{
+    margin-top:28px;
+}
+
+.github-input{
+    width:100%;
+    padding:18px 22px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(12px);
+    font-size:16px;
+    font-weight:500;
+    color:#081126;
+}
+
+/* ========================================= */
+/* 🔥 FIXED DROPDOWN (HCI SAFE VERSION) */
+/* ========================================= */
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.template-btn{
+    border:none;
+    background:#f4f6ff;
+    padding:12px 22px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.template-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:55px;
+    left:0;
+
+    width:190px;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(12px);
+
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.08);
+
+    padding:8px 0;
+
+    opacity:0;
+    transform:translateY(-10px);
+    pointer-events:none;
+
+    transition:all 0.25s ease;
+    z-index:1000;
+}
+
+.dropdown-menu.show{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+.dropdown-menu div{
+    padding:10px 14px;
+    color:#e2e8f0;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.dropdown-menu div:hover{
+    background:rgba(59,130,246,0.2);
+    padding-left:18px;
+}
+
+/* =============================================
+   ADD THESE STYLES TO YOUR EXISTING HeroSection.css
+   (paste at the bottom)
+============================================= */
+
+/* SELECTED TEMPLATE BADGE */
+.selected-template-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1.5px solid;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.badge-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.change-template-link {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: #4b58ff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  margin-left: 4px;
+  transition: opacity 0.2s;
+}
+
+.change-template-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* NO TEMPLATE HINT */
+.no-template-hint {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #475569;
+  opacity: 0.8;
+}
+
+/* ── ADD THESE AT THE BOTTOM OF HeroSection.css ── */
+
+.template-badges-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.selected-template-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1.5px solid;
+  font-size: 13px;
+  color: #0f172a;
+  width: fit-content;
+}
+
+.badge-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.change-template-link {
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: #4b58ff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  margin-left: 2px;
+  transition: opacity 0.2s;
+}
+.change-template-link:hover { opacity: 0.65; text-decoration: underline; }
+
+.no-template-hint {
+  font-size: 13px;
+  color: #475569;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  width: fit-content;
+}
+.no-template-hint:hover { opacity: 1; }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* ========================================= */
+/* MAIN SECTION */
+/* ========================================= */
+
+.hero{
+    min-height:100vh;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #67d1ff 0%,
+        #a8c7ff 40%,
+        #d9b6ff 75%,
+        #f29fff 100%
+    );
+
+    padding:22px 32px;
+}
+
+/* ========================================= */
+/* BLUR EFFECTS */
+/* ========================================= */
+
+.blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.blur1{
+    width:280px;
+    height:280px;
+    background:#00c3ff;
+
+    top:-120px;
+    left:-120px;
+}
+
+.blur2{
+    width:280px;
+    height:280px;
+    background:#d46cff;
+
+    right:-120px;
+    bottom:-120px;
+}
+
+/* ========================================= */
+/* TITLE */
+/* ========================================= */
+
+.main-title{
+    text-align:center;
+    font-size:36px;
+    font-weight:700;
+    color:#081126;
+    margin-bottom:24px;
+    position:relative;
+    z-index:2;
+}
+
+/* ========================================= */
+/* NAVBAR */
+/* ========================================= */
+
+.navbar{
+    width:100%;
+    max-width:1180px;
+    margin:auto;
+    height:72px;
+    background:white;
+    border-radius:50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 24px;
+    position:relative;
+    z-index:5;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ========================================= */
+/* LOGO */
+/* ========================================= */
+
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#061b57;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    font-weight:700;
+
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.logo:hover{
+    transform:scale(1.08);
+}
+
+/* ========================================= */
+/* NAV LINKS */
+/* ========================================= */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+/* ========================================= */
+/* NAV BUTTONS */
+/* ========================================= */
+
+.nav-btn{
+    border:none;
+    background:transparent;
+
+    font-size:15px;
+    font-weight:500;
+    color:#101827;
+
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.nav-btn:hover{
+    color:#4b58ff;
+    transform:translateY(-2px);
+}
+
+/* ========================================= */
+/* HERO CONTENT */
+/* ========================================= */
+
+.hero-content{
+    margin-top:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    position:relative;
+    z-index:2;
+}
+
+/* LEFT */
+.left-content{
+    width:48%;
+}
+
+.left-content h1{
+    font-size:42px;
+    line-height:52px;
+    font-weight:700;
+    color:#081126;
+}
+
+.left-content span{
+    color:#4d63ff;
+}
+
+.left-content p{
+    margin-top:18px;
+    width:95%;
+    font-size:17px;
+    line-height:30px;
+    color:#384256;
+}
+
+/* BUTTONS */
+.hero-buttons{
+    margin-top:28px;
+    display:flex;
+    gap:16px;
+}
+
+.get-started{
+    border:none;
+    padding:16px 28px;
+    border-radius:18px;
+    background:#221f7a;
+    color:white;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.get-started:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 22px rgba(34,31,122,0.28);
+}
+
+.view-template{
+    border:none;
+    padding:16px 28px;
+    border-radius:18px;
+    background:white;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.view-template:hover{
+    transform:translateY(-4px);
+}
+
+/* RIGHT */
+.right-content{
+    width:48%;
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+/* FLOATING */
+.floating{
+    position:absolute;
+    border-radius:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:700;
+    box-shadow:0 8px 22px rgba(0,0,0,0.12);
+    animation:float 4s ease-in-out infinite;
+}
+
+.code-icon{
+    width:72px;
+    height:72px;
+    background:linear-gradient(135deg,#7f5cff,#8e65ff);
+    top:30px;
+    left:0;
+    font-size:28px;
+}
+
+.js-icon{
+    width:78px;
+    height:78px;
+    background:linear-gradient(135deg,#3d7eff,#5f8dff);
+    right:0;
+    bottom:40px;
+    font-size:30px;
+}
+
+.github-icon{
+    width:84px;
+    height:84px;
+    background:white;
+    color:black;
+    top:0;
+    right:20px;
+    font-size:15px;
+}
+
+/* LAPTOP */
+.laptop{
+    width:100%;
+    max-width:500px;
+    height:310px;
+    background:#1d1a4b;
+    border-radius:24px;
+    padding:14px;
+    transform:perspective(1200px) rotateY(-7deg);
+    box-shadow:0 18px 45px rgba(0,0,0,0.18);
+}
+
+.screen{
+    width:100%;
+    height:100%;
+    background:white;
+    border-radius:16px;
+    display:flex;
+    overflow:hidden;
+}
+
+/* SIDEBAR */
+.screen-sidebar{
+    width:30%;
+    background:#0f1235;
+    padding:22px 14px;
+}
+
+.line{
+    height:8px;
+    background:#4f7cff;
+    border-radius:20px;
+    margin-bottom:14px;
+}
+
+.short{
+    width:70%;
+}
+
+/* CONTENT */
+.screen-content{
+    width:70%;
+    padding:18px;
+}
+
+.top-links{
+    display:flex;
+    justify-content:flex-end;
+    gap:16px;
+    font-size:11px;
+    margin-bottom:18px;
+}
+
+.profile{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.profile-text h2{ font-size:14px; }
+.profile-text h1{ font-size:22px; color:#4b58ff; }
+.profile-text p{ font-size:12px; }
+
+.avatar{
+    width:95px;
+    height:115px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#654dff,#8e5cff);
+}
+
+/* SOCIALS */
+.socials{
+    display:flex;
+    gap:8px;
+    margin-top:12px;
+}
+
+.socials div{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#4b58ff;
+}
+
+/* PROJECTS */
+.projects{
+    display:flex;
+    gap:12px;
+    margin-top:24px;
+}
+
+.projects div{
+    width:75px;
+    height:55px;
+    border-radius:14px;
+    background:#ececff;
+}
+
+/* ANIMATIONS */
+@keyframes float{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-12px); }
+    100%{ transform:translateY(0px); }
+}
+
+/* TABLET */
+@media (max-width:992px){
+    .hero-content{ flex-direction:column; text-align:center; }
+    .left-content, .right-content{ width:100%; }
+}
+
+/* MOBILE */
+@media (max-width:768px){
+    .navbar{ flex-direction:column; height:auto; gap:18px; }
+}
+
+/* ========================================= */
+/* INPUT */
+/* ========================================= */
+
+.github-input-box{
+    margin-top:28px;
+}
+
+.github-input{
+    width:100%;
+    padding:18px 22px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(12px);
+    font-size:16px;
+    font-weight:500;
+    color:#081126;
+}
+
+/* ========================================= */
+/* DROPDOWN — HCI FIXED                      */
+/* ========================================= */
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.template-btn{
+    border:none;
+    background:#f4f6ff;
+    padding:12px 22px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+    font-family: inherit;
+}
+
+.template-btn:hover,
+.dropdown--open .template-btn{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    background:#e8ecff;
+}
+
+/* invisible bridge — fills the gap between button and menu
+   so the mouse can travel down without triggering mouseleave */
+.dropdown-bridge{
+    position:absolute;
+    top:44px;       /* sits right below button */
+    left:0;
+    width:100%;
+    height:14px;    /* same as top offset of menu */
+    background:transparent;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:58px;       /* button height + bridge */
+    left:0;
+
+    width:210px;
+    background:rgba(15,23,42,0.97);
+    backdrop-filter:blur(16px);
+
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.1);
+    padding:6px;
+
+    opacity:0;
+    transform:translateY(-8px);
+    pointer-events:none;
+    transition:all 0.22s ease;
+    z-index:1000;
+}
+
+.dropdown-menu.show{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+/* items are now <button> for proper accessibility */
+.dropdown-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+    padding:10px 14px;
+    color:#e2e8f0;
+    cursor:pointer;
+    transition:all 0.18s ease;
+    border:none;
+    background:transparent;
+    font-size:14px;
+    font-weight:500;
+    font-family:inherit;
+    border-radius:10px;
+    text-align:left;
+}
+
+.dropdown-item:hover{
+    background:rgba(59,130,246,0.22);
+    color:#fff;
+    padding-left:18px;
+}
+
+.dropdown-item-icon{
+    font-size:16px;
+    flex-shrink:0;
+}
+
+/* ========================================= */
+/* STEP INDICATOR CARDS (HCI redesign)       */
+/* ========================================= */
+
+.steps-row{
+    display:flex;
+    gap:12px;
+    margin-top:22px;
+    flex-wrap:wrap;
+}
+
+.step-card{
+    flex:1;
+    min-width:180px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 16px;
+    border-radius:16px;
+    border:2px solid;
+    cursor:pointer;
+    transition:all 0.25s ease;
+    position:relative;
+    user-select:none;
+}
+
+.step-card--pending{
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(10px);
+    border-color:rgba(255,255,255,0.7);
+    /* subtle pulse draws attention */
+    animation: stepPulse 2.5s ease-in-out infinite;
+}
+
+.step-card--done{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    border-color:transparent;
+    animation:none;
+}
+
+.step-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 26px rgba(0,0,0,0.12);
+}
+
+.step-card:focus{
+    outline:2px solid rgba(75,88,255,0.6);
+    outline-offset:2px;
+}
+
+@keyframes stepPulse{
+    0%,100%{ box-shadow:0 4px 14px rgba(0,0,0,0.08); }
+    50%{ box-shadow:0 6px 22px rgba(75,88,255,0.25); }
+}
+
+.step-number{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#cbd5e1;
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:background 0.3s ease;
+}
+
+.step-card--done .step-number{
+    background:#10b981; /* overridden inline per template accent */
+}
+
+.step-text-wrap{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    flex:1;
+    min-width:0;
+}
+
+.step-label{
+    font-size:11px;
+    font-weight:600;
+    color:#64748b;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+.step-action{
+    font-size:13px;
+    font-weight:600;
+    color:#4b58ff;
+}
+
+.step-value{
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.step-change-btn{
+    flex-shrink:0;
+    border:1.5px solid rgba(0,0,0,0.12);
+    background:transparent;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+    padding:3px 10px;
+    cursor:pointer;
+    color:#475569;
+    transition:all 0.2s;
+    font-family:inherit;
+}
+
+.step-change-btn:hover{
+    border-color:#4b58ff;
+    color:#4b58ff;
+    background:rgba(75,88,255,0.07);
+}
+
+/* ── ADD THESE AT THE BOTTOM OF HeroSection.css ── */
+
+/* (step-card styles defined above — badges section removed) */

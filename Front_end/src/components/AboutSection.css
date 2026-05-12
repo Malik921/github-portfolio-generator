@@ -1,0 +1,151 @@
+.about-section {
+  position: relative;
+  padding: 100px 20px;
+  background: #0b0f19;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* =======================
+   BACKGROUND GLOW EFFECT
+======================= */
+.bg-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  filter: blur(140px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.glow1 {
+  background: #3b82f6;
+  top: -120px;
+  left: -120px;
+}
+
+.glow2 {
+  background: #8b5cf6;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* =======================
+   CONTENT
+======================= */
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: auto;
+}
+
+.about-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 45px;
+}
+
+/* =======================
+   FEATURES ROW (IMPORTANT FIX)
+======================= */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: nowrap;   /* keeps all in one line */
+}
+
+/* =======================
+   FEATURE CARD
+======================= */
+.feature {
+  flex: 1;
+  max-width: 250px;
+  min-width: 220px;
+
+  background: rgba(255, 255, 255, 0.05);
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =======================
+   HOVER EFFECT (UX POLISH)
+======================= */
+.feature:hover {
+  transform: translateY(-6px) scale(1.07);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.25);
+}
+
+/* LIGHT SWEEP EFFECT */
+.feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.feature:hover::before {
+  left: 120%;
+}
+
+/* ICON ANIMATION */
+.icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover .icon {
+  transform: rotate(12deg) scale(1.2);
+}
+
+/* =======================
+   RESPONSIVE (MOBILE)
+======================= */
+@media (max-width: 768px) {
+  .features {
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 100%;
+  }
+}
